@@ -18,10 +18,15 @@ const eslintConfig = [
 		plugins: { prettier },
 		rules: {
 			"prettier/prettier": ["warn", { useTabs: true, tabWidth: 4 }],
-			indent: ["error", "tab"], // Enforces tab indentation in ESLint
-			quotes: ["error", "double"], // Enforces double quotes in ESLint
-			"no-console": "warn", // Warns about console.log() in ESLint
-			"no-unused-vars": "warn", // Warns about unused variables in ESLint
+			indent: ["error", "tab"],
+			quotes: ["error", "double"],
+			"no-console": "warn",
+			"padding-line-between-statements": [
+				"error",
+				{ blankLine: "always", prev: "block-like", next: "*" },
+				{ blankLine: "always", prev: "*", next: "block-like" },
+				{ blankLine: "always", prev: "*", next: "export" },
+			],
 		},
 	},
 ];
