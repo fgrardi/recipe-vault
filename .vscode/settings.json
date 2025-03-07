@@ -1,4 +1,8 @@
 {
+	"editor.codeActionsOnSave": {
+		"source.addMissingImports": "always",
+		"source.organizeImports": "never" // ESLint handles this
+	},
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
